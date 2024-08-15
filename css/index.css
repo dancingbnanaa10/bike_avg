@@ -1,0 +1,76 @@
+/* Hide number input arrows in Webkit-based browsers (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Remove default arrows */
+    margin: 0;                /* Reset margin */
+}
+
+/* Hide number input arrows in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield; /* Remove default arrows */
+}
+
+/* Hide number input arrows in Edge */
+input[type="number"]::-ms-expand {
+    display: none; /* Remove default arrows */
+}  
+    @font-face {
+    font-family: "DS_DIGI_A";
+    src: url("../ds_digital/digi.TTF") format('truetype');;
+    }
+    @font-face {
+    font-family: "DS_DIGI_B";
+    src: url("../ds_digital/DS-DIGIB.TTF") format('truetype');;
+    }
+    @font-face {
+    font-family: "DS_DIGI_C";
+    src: url("../ds_digital/DS-DIGII.TTF") format('truetype');;
+    }
+    @font-face {
+    font-family: "DS_DIGI_D";
+    src: url("../ds_digital/DS-DIGIT.TTF") format('truetype');;
+    }
+    .font_digi_A
+    {
+        font-family: "DS_DIGI_A" !important;
+        font-size: 60px;
+    }
+    .font_digi_B
+    {
+        font-family: "DS_DIGI_B" !important;
+        font-size: 60px;
+    }
+    .font_digi_C
+    {
+        font-family: "DS_DIGI_C" !important;
+        font-size: 60px;
+    }
+    .font_digi_D
+    {
+        font-family: "DS_DIGI_D" !important;
+        font-size: 60px;
+    }
+    body{
+        background: #102954;
+        color: #33ff00;
+    }
+    #main_Container .st_row,
+    #main_Container .nd_row
+    {
+        height: 50%;
+        width: 100%;
+    }
+    .input_trans
+    {
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 0;
+        font-size: 20px;
+        color: #33ff00;
+        font-family: "DS_DIGI_B";
+    }
+    .input_trans::placeholder
+    {
+        color: #33ff00;
+    }
