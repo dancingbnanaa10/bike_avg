@@ -1,10 +1,15 @@
 const viewportWidth = window.innerWidth;
 const viewportHeight = window.innerHeight;
-const main_C = document.querySelector('#main_Container');
-main_C.style.width = viewportWidth*.8 + "px";
-main_C.style.height = viewportHeight*.6+"px";
-main_C.style.marginLeft = viewportWidth*.1+"px";
-main_C.style.marginTop = viewportHeight*.15+"px";
+function resizing()
+{
+    const main_C = document.querySelector('#main_Container');
+    main_C.style.width = viewportWidth*.8 + "px";
+    main_C.style.height = viewportHeight*.6+"px";
+    main_C.style.marginLeft = viewportWidth*.1+"px";
+    main_C.style.marginTop = viewportHeight*.15+"px";
+}
+resizing();
+window.addEventListener("resize",resizing());
 var st_calc = 0;
 
 var input_sel = document.querySelector('.input_trans');
@@ -48,7 +53,11 @@ margin_setter('.spacer','#main_Container .st_row .spacer_thin .input_trans');
 margin_setter('#main_Container .nd_row .spacer','#main_Container .nd_row .spacer_thin .input_trans');
 function getValue(id)
 {
-    return parseFloat(document.querySelector("#"+id).value)
+    var ret_val = parseFloat(document.querySelector("#"+id).value)
+    if(Number.isNaN(ret_val))
+    {
+        return 0;
+    }else { return ret_val}
 }
 function main_calc(chk)
 {
