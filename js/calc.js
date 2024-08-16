@@ -1,10 +1,10 @@
 const viewportWidth = window.innerWidth;
 const viewportHeight = window.innerHeight;
 const main_C = document.querySelector('#main_Container');
-main_C.style.width = viewportWidth*.3 + "px";
+main_C.style.width = viewportWidth*.8 + "px";
 main_C.style.height = viewportHeight*.6+"px";
-main_C.style.marginLeft = viewportWidth*.35+"px";
-main_C.style.marginTop = viewportHeight*.2+"px";
+main_C.style.marginLeft = viewportWidth*.1+"px";
+main_C.style.marginTop = viewportHeight*.15+"px";
 var st_calc = 0;
 
 var input_sel = document.querySelector('.input_trans');
