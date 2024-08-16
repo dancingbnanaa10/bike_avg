@@ -55,10 +55,13 @@ input[type="number"]::-ms-expand {
         color: #33ff00;
     }
     #main_Container .st_row,
-    #main_Container .nd_row
+    #main_Container .nd_row,
+    #main_Container .rd_row
     {
-        height: 50%;
+        height: 33%;
         width: 100%;
+        display: flex;
+        justify-content: space-evenly;
     }
     .input_trans
     {
@@ -69,8 +72,39 @@ input[type="number"]::-ms-expand {
         font-size: 20px;
         color: #33ff00;
         font-family: "DS_DIGI_B";
+        width: 70%;
+        height: 70%;
+        margin: 15%;
+        text-align: center;
     }
     .input_trans::placeholder
     {
         color: #33ff00;
     }
+#main_Container .st_row .spacer
+{
+    width: 45%;
+    height: 100%;
+    display: flex;
+}
+#main_Container .st_row .spacer_thin
+{
+    height: 100%;
+    width: 10%;
+    display: flex;
+
+}
+#main_Container .nd_row .spacer_thin
+{
+    width: 10%;
+}
+#main_Container .st_row .spacer_thin .center
+{
+    height: 70%;
+    margin-top: 15%;
+}
+#result
+{
+    padding-top: 0;
+    margin-top: 0;
+}

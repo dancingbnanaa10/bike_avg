@@ -10,13 +10,39 @@
 <body style="height: 100%;">
 <div id="main_Container">
     <div class="st_row">
-        <input type="number" class="input_trans" placeholder="Km">
+        <div class="spacer">
+            <input class="input_trans" type="number" placeholder="KM" id="km" oninput="main_calc(1)">
+        </div>
+        <div class="spacer_thin">
+            <input class="input_trans" type="number" placeholder="," disabled>
+        </div>
+        <div class="spacer">
+            <input id="meters" class="input_trans" type="number" placeholder="M" max="999" min="0" oninput="checker(this.id); main_calc(1)">
+        </div>
     </div>
     <div class="nd_row">
-
+        <div class="spacer">
+            <input class="input_trans" type="number" placeholder="Hr" id="hrs" oninput="main_calc(1)">
+        </div>
+        <div class="spacer_thin">
+            <input class="input_trans" type="number" placeholder=":" disabled>
+        </div>
+        <div class="spacer">
+            <input class="input_trans" type="number" placeholder="Min" id="mins" oninput="main_calc(1)">
+        </div>
+        <div class="spacer_thin">
+            <input class="input_trans" type="number" placeholder=":" disabled>
+        </div>
+        <div class="spacer">
+            <input class="input_trans" type="number" placeholder="Sec" id="secs" oninput="main_calc(0)">
+        </div>
+    </div>
+    <div class="rd_row">
+        <div><input class="input_trans" type="text" disabled id="result" placeholder="Avg Km/h"></div>
+    </div>
     </div>
 </div>
-<input type="number" value="DIST">
+
 
 
 <script src="./js/calc.js"></script>
